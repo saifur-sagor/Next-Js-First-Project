@@ -14,6 +14,7 @@ export default function Navbar() {
             </div>
             <ul tabIndex={0} className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
               <li><Link href="/">Home</Link></li>
+              <li><Link href="/About">About Us</Link></li>
               <li><Link href="/AllItems">All Items</Link></li>
             </ul>
           </div>
@@ -32,6 +33,7 @@ export default function Navbar() {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 font-medium">
             <li><Link href="/">Home</Link></li>
+            <li><Link href="/About">About Us</Link></li>
             <li><Link href="/AllItems">All Items</Link></li>
           </ul>
         </div>

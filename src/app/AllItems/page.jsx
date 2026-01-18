@@ -8,7 +8,7 @@ export default function AllItems() {
   const [foods, setFoods] = useState([]);
 
   useEffect(() => {
-    fetch("/items.json")
+    fetch("/Items.json")
       .then((res) => res.json())
       .then((data) => setFoods(data));
   }, []);

@@ -13,13 +13,16 @@ export default function Login() {
     e.preventDefault();
 
     if (email === "admin@foody.com" && password === "123456") {
+        localStorage.setItem("isLoggedIn", "true");
+        // user email save 
+        localStorage.setItem("userEmail", email);
       router.push("/AllItems"); 
     } else {
       setError("Wrong email or password: admin@foody.com / 123456");
     }
   };
 
-  return (
+  return ( 
     <div className="min-h-[80vh] flex items-center justify-center bg-gray-50 px-6">
       <motion.div 
         initial={{ opacity: 0, scale: 0.9 }}
@@ -38,7 +41,7 @@ export default function Login() {
             <label className="block text-sm font-bold text-slate-700 mb-2">Email Address</label>
             <input 
               type="email" 
-              placeholder="admin@foody.com"
+              placeholder="info@foody.com"
               className="w-full px-5 py-4 rounded-2xl bg-gray-50 border border-gray-200 focus:border-yellow-400 outline-none transition-all"
               onChange={(e) => setEmail(e.target.value)}
               required
@@ -49,7 +52,7 @@ export default function Login() {
             <label className="block text-sm font-bold text-slate-700 mb-2">Password</label>
             <input 
               type="password" 
-              placeholder="123456"
+              placeholder="******"
               className="w-full px-5 py-4 rounded-2xl bg-gray-50 border border-gray-200 focus:border-yellow-400 outline-none transition-all"
               onChange={(e) => setPassword(e.target.value)}
               required
