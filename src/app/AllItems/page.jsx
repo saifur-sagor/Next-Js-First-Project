@@ -102,7 +102,7 @@ export default function AllItems() {
                     <ShoppingCart size={20} />
                   </button>
                 </div>
-                <Link href={'/'}>
+                <Link href={`/AllItems/${food.id}`}>
                  <button className="w-full my-2 p-2 italic cursor-pointer rounded-2xl bg-amber-500 hover:bg-amber-400">View More</button></Link>
               </div>
             </motion.div>

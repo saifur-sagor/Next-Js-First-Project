@@ -12,12 +12,10 @@ export default function Login() {
   const handleLogin = (e) => {
     e.preventDefault();
 
-    // সরাসরি হার্ডকোডেড চেক
     if (email === "admin@foody.com" && password === "123456") {
-      // সফল লগইন হলে ইউজারকে আইটেম লিস্ট পেজে পাঠিয়ে দাও
-      router.push("/items"); 
+      router.push("/AllItems"); 
     } else {
-      setError("ভুল ইমেইল বা পাসওয়ার্ড! ব্যবহার করুন: admin@foody.com / 123456");
+      setError("Wrong email or password: admin@foody.com / 123456");
     }
   };
 
