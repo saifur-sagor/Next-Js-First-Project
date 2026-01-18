@@ -8,7 +8,7 @@ export default function PopularFood() {
   const [foods, setFoods] = useState([]);
 
   useEffect(() => {
-    fetch("/item.json")
+    fetch("/items.json")
       .then((res) => res.json())
       .then((data) => setFoods(data.slice(0, 6)));
   }, []);

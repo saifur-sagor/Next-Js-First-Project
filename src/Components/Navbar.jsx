@@ -37,7 +37,7 @@ export default function Navbar() {
         </div>
 
         <div className="navbar-end gap-2">
-          <Link href="/login" className="btn btn-ghost">Login</Link>
+          <Link href="/Login" className="btn btn-ghost">Login</Link>
           <Link href="/items" className="btn bg-yellow-400 hover:bg-yellow-500 text-slate-900 border-none">Order Now</Link>
         </div>
       </div>
