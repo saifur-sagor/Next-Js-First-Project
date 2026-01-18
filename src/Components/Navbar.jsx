@@ -16,6 +16,7 @@ export default function Navbar() {
               <li><Link href="/">Home</Link></li>
               <li><Link href="/About">About Us</Link></li>
               <li><Link href="/AllItems">All Items</Link></li>
+              <li><Link href="/AddItem">Add Item</Link></li>
             </ul>
           </div>
 
@@ -33,8 +34,9 @@ export default function Navbar() {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 font-medium">
             <li><Link href="/">Home</Link></li>
-            <li><Link href="/About">About Us</Link></li>
             <li><Link href="/AllItems">All Items</Link></li>
+            <li><Link href="/About">About Us</Link></li>
+            <li><Link href="/AddItem">Add Item</Link></li>
           </ul>
         </div>
 
