@@ -2,6 +2,11 @@ import Link from "next/link";
 import { UtensilsCrossed } from "lucide-react";
 
 export default function Navbar() {
+  const handleLogout = () => {
+  localStorage.removeItem("isLoggedIn");
+  localStorage.removeItem("userEmail");
+  window.location.href = "/Login";
+};
   return (
     <div className="sticky top-0 z-50 bg-base-100 shadow-md">
       <div className="navbar container mx-auto">
