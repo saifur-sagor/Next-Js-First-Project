@@ -1,5 +1,6 @@
 import AppDownload from "@/Components/AppDownLoad";
 import Banner from "@/Components/Banner";
+import Newsletter from "@/Components/NewsLetter";
 import PopularFood from "@/Components/PopularFood";
 import Reviews from "@/Components/Reviews";
 import SpecialOffer from "@/Components/SpecialOffer";
@@ -14,6 +15,7 @@ export default function Home() {
       <SpecialOffer></SpecialOffer>
       <Reviews></Reviews>
       <AppDownload></AppDownload>
+      <Newsletter></Newsletter>
     </>
   );
 }
