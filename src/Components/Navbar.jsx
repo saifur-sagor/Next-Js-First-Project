@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { UtensilsCrossed } from "lucide-react"; // আইকন ইমপোর্ট
+import { UtensilsCrossed } from "lucide-react";
 
 export default function Navbar() {
   return (
@@ -14,7 +14,7 @@ export default function Navbar() {
             </div>
             <ul tabIndex={0} className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
               <li><Link href="/">Home</Link></li>
-              <li><Link href="/items">All Items</Link></li>
+              <li><Link href="/AllItems">All Items</Link></li>
             </ul>
           </div>
 
@@ -24,7 +24,7 @@ export default function Navbar() {
               <UtensilsCrossed size={24} className="text-white" />
             </div>
             <span className="text-2xl font-black tracking-tighter text-slate-800">
-              FOOD<span className="text-yellow-500">Y</span>
+              FOO<span className="text-yellow-500">DY</span>
             </span>
           </Link>
         </div>
@@ -32,7 +32,7 @@ export default function Navbar() {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 font-medium">
             <li><Link href="/">Home</Link></li>
-            <li><Link href="/items">All Items</Link></li>
+            <li><Link href="/AllItems">All Items</Link></li>
           </ul>
         </div>
 

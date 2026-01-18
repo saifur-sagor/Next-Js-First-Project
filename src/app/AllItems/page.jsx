@@ -4,13 +4,13 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Star, ShoppingCart, Clock } from "lucide-react";
 
-export default function PopularFood() {
+export default function AllItems() {
   const [foods, setFoods] = useState([]);
 
   useEffect(() => {
     fetch("/items.json")
       .then((res) => res.json())
-      .then((data) => setFoods(data.slice(0, 6)));
+      .then((data) => setFoods(data));
   }, []);
 
   return (
@@ -19,7 +19,7 @@ export default function PopularFood() {
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-4xl font-black text-slate-800 uppercase tracking-tighter">
-            Our Popular <span className="text-yellow-500">Dishes</span>
+            Our All <span className="text-yellow-500">Dishes</span>
           </h2>
           <div className="w-20 h-1.5 bg-yellow-400 mx-auto mt-2 rounded-full"></div>
           <p className="text-gray-500 mt-4 max-w-lg mx-auto">
@@ -102,21 +102,11 @@ export default function PopularFood() {
                     <ShoppingCart size={20} />
                   </button>
                 </div>
-               <Link href={'/'}>
-                <button className="w-full my-2 p-2 italic cursor-pointer rounded-2xl bg-amber-500 hover:bg-amber-400">View More</button></Link>
+                <Link href={'/'}>
+                 <button className="w-full my-2 p-2 italic cursor-pointer rounded-2xl bg-amber-500 hover:bg-amber-400">View More</button></Link>
               </div>
             </motion.div>
           ))}
-        </div>
-
-        {/* See All Button */}
-        <div className="text-center mt-12">
-          <Link
-            href="/AllItems"
-            className="btn btn-outline border-2 border-slate-900 hover:bg-yellow-500 hover:border-slate-900 px-10 rounded-full font-bold"
-          >
-            See All Items
-          </Link>
         </div>
       </div>
     </section>
