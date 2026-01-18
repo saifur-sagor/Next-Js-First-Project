@@ -1,3 +1,4 @@
+import AppDownload from "@/Components/AppDownLoad";
 import Banner from "@/Components/Banner";
 import PopularFood from "@/Components/PopularFood";
 import Reviews from "@/Components/Reviews";
@@ -12,6 +13,7 @@ export default function Home() {
       <PopularFood></PopularFood>
       <SpecialOffer></SpecialOffer>
       <Reviews></Reviews>
+      <AppDownload></AppDownload>
     </>
   );
 }
