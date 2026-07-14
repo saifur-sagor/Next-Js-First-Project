@@ -8,7 +8,7 @@ export default function Navbar() {
   window.location.href = "/Login";
 };
   return (
-    <div className="sticky top-0 z-50 bg-base-100 shadow-md">
+    <div className="sticky top-0 z-50 bg-base-100 shadow-md mb-0.5">
       <div className="navbar container mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
@@ -30,7 +30,7 @@ export default function Navbar() {
             <div className="bg-yellow-400 p-2 rounded-lg group-hover:bg-yellow-500 transition-colors">
               <UtensilsCrossed size={24} className="text-white" />
             </div>
-            <span className="text-2xl font-black tracking-tighter text-slate-800">
+            <span className="text-2xl font-black tracking-tighter text-white">
               FOO<span className="text-yellow-500">DY</span>
             </span>
           </Link>

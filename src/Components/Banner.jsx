@@ -1,4 +1,5 @@
 "use client";
+import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 
@@ -36,6 +37,13 @@ const sliderData = [
 ];
 
 export default function Banner() {
+  const [isMounted, setIsMounted] = useState(false);
+
+useEffect(() => {
+  setIsMounted (true);
+}, []);
+
+if (!isMounted) return null;
   return (
     <div className="w-full h-[65vh] relative overflow-hidden">
       <Swiper
@@ -86,17 +94,17 @@ export default function Banner() {
       </Swiper>
 
       {/* Custom Styles for Swiper Pagination */}
-      <style jsx global>{`
-        .swiper-pagination-bullet-active {
-          background: #facc15 !important;
-          width: 24px !important;
-          border-radius: 10px !important;
-        }
-        .swiper-pagination-bullet {
-          background: white;
-          opacity: 0.8;
-        }
-      `}</style>
+      <style>{`
+  .swiper-pagination-bullet-active {
+    background: #facc15 !important;
+    width: 24px !important;
+    border-radius: 10px !important;
+  }
+  .swiper-pagination-bullet {
+    background: white !important;
+    opacity: 0.8 !important;
+  }
+`}</style>
     </div>
   );
 }
